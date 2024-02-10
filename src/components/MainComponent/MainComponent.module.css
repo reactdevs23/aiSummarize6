@@ -1,0 +1,233 @@
+.mainWrapper {
+  display: flex;
+
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.wrapper {
+  max-width: 460px;
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  z-index: 100;
+}
+.topDivContainer {
+  --padding: 15px;
+  min-width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.topDiv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border: var(--border);
+  border-radius: 70px;
+  padding: var(--padding);
+}
+.heading {
+  color: var(--headingColor);
+
+  text-align: center;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 20px;
+  align-self: flex-start;
+  padding-bottom: 15px;
+}
+.spaceBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--padding);
+}
+.text {
+  color: var(--textColor);
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  max-width: 100px;
+}
+.rightText {
+  text-align: right;
+}
+.mainDivContainer {
+  position: relative;
+  width: 100%;
+}
+.funnelContainer {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  z-index: -1;
+  width: 70%;
+}
+.funnel {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.funnel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-60%, -50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--innerCirlceColor);
+  z-index: 2;
+}
+.funnel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-55%, -50%);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--outerCircleColor);
+  z-index: 1;
+}
+.mainDiv {
+  width: 100%;
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+  min-height: 82px;
+}
+
+.iconContainer {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--iconBg);
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainDiv .title {
+  color: var(--titleColor);
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  padding: 15px;
+  padding-top: 45px;
+}
+
+.customerWearable {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+.wearables {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  width: 100%;
+}
+.wearable {
+  border: var(--border);
+  background: var(--bg);
+  flex: 1;
+  aspect-ratio: 1/1;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  --space: 35px;
+}
+.wearable::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: var(--space);
+  background: var(--lineColor);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  z-index: 1;
+}
+.arrow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - var(--space) + 10px));
+  color: var(--lineColor);
+  font-size: 22px;
+  z-index: 2;
+}
+.customerWearable .title {
+  color: var(--titleColor);
+  text-align: center;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
+.facilities {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.facility {
+  border: var(--border);
+  box-shadow: var(--boxShadow);
+  background: var(--bg);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  min-height: 109px;
+}
+.facility .icon {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.info {
+  color: var(--infoColor);
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  max-width: 160px;
+}
