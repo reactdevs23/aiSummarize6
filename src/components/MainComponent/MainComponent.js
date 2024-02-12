@@ -25,15 +25,18 @@ const MainComponent = ({
             }}
           >
             <div className={classes.topDiv}>
-              <div className={classes.icon}>{topDiv.leftIcon}</div>
+              <div className={classes.icon}>
+                {topDiv.leftIcon}
+                <p className={classes.text}>{topDiv.leftText}</p>
+              </div>
               <p className={classes.heading}>{topDiv.heading}</p>
-              <div className={classes.icon}>{topDiv.rightIcon}</div>
-            </div>
-            <div className={classes.spaceBetween}>
-              <p className={classes.text}>{topDiv.leftText}</p>
-              <p className={[classes.text, classes.rightText].join(" ")}>
-                {topDiv.rightText}
-              </p>
+              <div className={classes.icon}>
+                {topDiv.rightIcon}
+
+                <p className={[classes.text, classes.rightText].join(" ")}>
+                  {topDiv.rightText}
+                </p>
+              </div>
             </div>
           </div>
           <div className={classes.mainDivContainer}>
@@ -81,9 +84,8 @@ const MainComponent = ({
                     <div className={classes.icon}>{wearable.icon}</div>
                   </div>
                 ))}
+                <p className={classes.bottomTitle}>{customerWearables.title}</p>
               </div>
-
-              <p className={classes.title}>{customerWearables.title}</p>
             </div>
           </div>
         </div>
@@ -98,10 +100,9 @@ const MainComponent = ({
                 "--boxShadow": facility.boxShadow,
                 "--bg": facility.bg,
               }}
+              key={i}
             >
-              <div className={classes.icon} key={i}>
-                {facility.icon}
-              </div>
+              <div className={classes.icon}>{facility.icon}</div>
               <p
                 className={classes.info}
                 dangerouslySetInnerHTML={{ __html: facility.info }}

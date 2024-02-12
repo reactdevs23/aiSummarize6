@@ -19,7 +19,7 @@ function App() {
     mainBg: "#FFF",
 
     funnel: {
-      img: <Funnel topColor="" bottomColor="#F2F4F7" opacity={0.29} />,
+      img: <Funnel topColor="#78CCE6" bottomColor="#F2F4F7" opacity={0.29} />,
       innerCirlceColor: "#78CCE6",
       outerCircleColor: "rgba(117, 205, 230, 0.20)",
     },

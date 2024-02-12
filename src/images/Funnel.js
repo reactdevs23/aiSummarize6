@@ -20,8 +20,8 @@ const Funnel = ({ topColor, bottomColor, opacity = 0.29 }) => (
         y2="8.19564e-06"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color={bottomColor} />
-        <stop offset="1" stop-color="#78CCE6" stop-opacity={opacity} />
+        <stop stopColor={bottomColor} />
+        <stop offset="1" stopColor={topColor} stopOpacity={opacity} />
       </linearGradient>
     </defs>
   </svg>
